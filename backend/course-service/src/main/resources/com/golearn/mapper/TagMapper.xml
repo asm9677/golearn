@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.golearn.mapper.TagMapper">
+
+	<insert id="insertTag">
+			insert ignore into gl_course_tag
+			values
+		<foreach collection="list" item="item" separator=", ">
+			(#{cosNo}, #{item})
+		</foreach>
+	</insert>
+	
+	<select id="findByCosNo" resultType="com.golearn.dto.Tag">
+		select t.*
+		from gl_course_tag gct inner join gl_tag t
+		on gct.cos_no = #{cosNo} and gct.tag_no = t.tag_no
+	</select>
+	
+	<delete id="deleteTag">
+		delete
+		from gl_course_tag
+		<where>
+			<foreach collection="list" item="item" separator="OR">
+				(cos_no = #{cosNo} and tag_no = #{item})
+			</foreach>
+		</where>
+	</delete>
+	
+</mapper>
