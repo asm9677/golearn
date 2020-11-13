@@ -80,7 +80,6 @@ public class CommentReplyBottomFragment extends BottomSheetDialogFragment {
         videoViewModel.getReplies().observe(this.getActivity(), comments -> {
             List<Comment> list = comments;
             for (Comment comment : list) {
-                System.out.println(comment);
                 comment.setDate(CommonUtils.calcTimeDate(comment.getRegDt()));
                 originComments.add(comment);
             }

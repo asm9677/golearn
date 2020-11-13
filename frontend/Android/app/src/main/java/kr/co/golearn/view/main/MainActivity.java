@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             isSearchMode = true;
             mainAppName.setVisibility(View.INVISIBLE);
             mainEdtSearch.setVisibility(View.VISIBLE);
-            bottomNavigationView.setVisibility(View.GONE);
+//            bottomNavigationView.setVisibility(View.GONE);
             mainEdtSearch.requestFocus();
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.showSoftInput(mainEdtSearch, InputMethodManager.SHOW_IMPLICIT);
@@ -180,7 +180,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        System.out.println("????");
         // Search 모드가 아닐 경우
         if (!isSearchMode) {
             if (pressedBackButtonTime == 0) {
@@ -200,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
             isSearchMode = false;
             mainAppName.setVisibility(View.VISIBLE);
             mainEdtSearch.setVisibility(View.GONE);
-            bottomNavigationView.setVisibility(View.VISIBLE);
+//            bottomNavigationView.setVisibility(View.VISIBLE);
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(mainEdtSearch.getWindowToken(), 0);
         }

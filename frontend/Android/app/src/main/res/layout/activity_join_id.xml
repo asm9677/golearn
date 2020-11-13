@@ -26,7 +26,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/app_font_regular"
-        android:text="Run &amp; Go"
+        android:text="Go Learn, Go Run !"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"

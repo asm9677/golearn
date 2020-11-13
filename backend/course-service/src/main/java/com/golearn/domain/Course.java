@@ -104,8 +104,8 @@ public class Course {
 	@PrePersist
 	void prePersist() {
 		this.regDt = this.chgDt = new Date();
-		this.cosThumbnail = "course_default_thumbnail.png";
-		this.cosBanner = "course_banner_default.png";
+		this.cosThumbnail = "https://go-learn.s3.ap-northeast-2.amazonaws.com/course/thumbnail/course_thumbnail_default.png";
+		this.cosBanner = "https://go-learn.s3.ap-northeast-2.amazonaws.com/course/banner/course_banner_default.png";
 	}
 
 	@PreUpdate

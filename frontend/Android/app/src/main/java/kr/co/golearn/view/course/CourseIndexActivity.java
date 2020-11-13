@@ -129,7 +129,6 @@ public class CourseIndexActivity extends AppCompatActivity {
 
     @OnCheckedChanged(R.id.course_index_checkbox_more)
     void checkBoxDetailMore(boolean isChecked) {
-        System.out.println(thumbnailHeight + "  " + layoutHeight);
         if (isChecked) {
             slideView(courseThumbnail, thumbnailHeight, 1);
             slideView(courseContent, layoutHeight, 1);

@@ -235,7 +235,6 @@ public class VideoActivity extends AppCompatActivity {
                     stateString = "UNKNOWN_STATE             -";
                     break;
             }
-            Log.d(TAG, "changed state to " + stateString);
         }
     }
 
