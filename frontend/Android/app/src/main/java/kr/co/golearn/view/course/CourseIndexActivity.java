@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -113,7 +114,7 @@ public class CourseIndexActivity extends AppCompatActivity {
         courseTopTitle.setText(course.getCosTitle());
         courseTitle.setText(course.getCosTitle());
         courseAuthorNickname.setText(course.getMbrNickname());
-        courseContent.setText(course.getCosContent());
+        courseContent.setText(Html.fromHtml(course.getCosContent()));
 
         thumbnailHeight = courseThumbnail.getLayoutParams().height;
         layoutHeight = courseContent.getHeight();
